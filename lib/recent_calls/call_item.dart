@@ -15,13 +15,12 @@ class _CallCardState extends State<CallCard> {
       padding: const EdgeInsets.only(right: 0),
       child: Row(
         children: [
-          Container(
-            width: 55,
-            alignment: Alignment.center,
-            child: const Icon(
+          const Padding(
+            padding: EdgeInsets.only(left: 14, top: 15, right: 14, bottom: 31),
+            child: Icon(
               Icons.phone_forwarded,
-              color: Colors.black26,
-              size: 21,
+              color: Color(0xFFC4C4C6),
+              size: 14,
             ),
           ),
           Expanded(
@@ -31,20 +30,19 @@ class _CallCardState extends State<CallCard> {
                 Text('+0 (000) 000-00-00',
                     style:
                         TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
-                Text('Доп. информация', style: TextStyle(color: Colors.black38, fontSize: 14)),
+                Text('Доп. информация', style: TextStyle(color: Color(0xff8A8A8D), fontSize: 15)),
               ],
             ),
           ),
-          const Text('Дата', style: TextStyle(color: Colors.black38, fontSize: 14)),
-          SizedBox(
-            width: 55,
-            child: IconButton(
-                onPressed: () => Navigator.pushNamed(context, '/info'),
-                icon: const Icon(
-                  Icons.info_outlined,
-                  color: Colors.lightBlue,
-                )),
-          ),
+          const Text('Дата', style: TextStyle(color: Color(0xff8A8A8D), fontSize: 15)),
+          IconButton(
+            padding: const EdgeInsets.only(left: 8, right: 21),
+              onPressed: () => Navigator.pushNamed(context, '/info'),
+              icon: const Icon(
+                Icons.info_outlined,
+                color: Color(0xff3478F6),
+                size: 22,
+              )),
         ],
       ),
     );
