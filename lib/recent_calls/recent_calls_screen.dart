@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:call_logs/recent_calls/call_item.dart';
 import 'package:flutter/services.dart';
 
+import 'package:call_logs/styles/colors.dart';
+
 class RecentCalls extends StatefulWidget {
   const RecentCalls({Key? key}) : super(key: key);
 
@@ -14,15 +16,16 @@ class _RecentCallsState extends State<RecentCalls> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 1,
+        backgroundColor: AppColor.appBar,
+
         title: const Text(
           'Журнал звонков',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: AppColor.primary),
         ),
-        backgroundColor: const Color(0xffF9F9FB),
-
         systemOverlayStyle: const SystemUiOverlayStyle(
           // Status bar color
-          statusBarColor: Color(0xffF9F9FB),
+          statusBarColor: AppColor.appBar,
 
           // Status bar brightness (optional)
           statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
@@ -34,7 +37,7 @@ class _RecentCallsState extends State<RecentCalls> {
         itemBuilder: (_, int index) => const CallCard(),
         separatorBuilder: (_, int index) => const Padding(
           padding: EdgeInsets.only(left: 42),
-          child: Divider(thickness: 0.5, height: 0.5),
+          child: Divider(thickness: 0.5, height: 0.5, color: AppColor.tertiary),
         ),
         itemCount: 300,
         physics: const BouncingScrollPhysics(),
