@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 
 import 'package:call_logs/styles/colors.dart';
 
+import '../styles/colors.dart';
+
 class RecentCalls extends StatefulWidget {
   const RecentCalls({Key? key}) : super(key: key);
 
