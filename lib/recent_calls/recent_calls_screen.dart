@@ -1,14 +1,11 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import 'package:call_logs/recent_calls/call_item.dart';
 import 'package:flutter/services.dart';
 
 import 'package:call_logs/styles/colors.dart';
-
-import '../styles/colors.dart';
 
 class RecentCalls extends StatefulWidget {
   const RecentCalls({Key? key}) : super(key: key);
