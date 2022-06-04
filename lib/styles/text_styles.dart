@@ -11,6 +11,13 @@ class AppTextStyle {
     );
   }
 
+  static TextStyle regular30({Color? color = AppColor.primary}) {
+    return TextStyle(
+      fontSize: 30,
+      color: color,
+    );
+  }
+
   static TextStyle regular15({Color? color = AppColor.secondary}) {
     return TextStyle(
       fontSize: 15,
